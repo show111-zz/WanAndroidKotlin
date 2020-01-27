@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.wanandroidkotlin.R
 import com.example.wanandroidkotlin.base.BaseActivity
-import com.example.wanandroidkotlin.homes.model.HomesModelImpl
+import com.example.wanandroidkotlin.homes.usecase.HomesUseCaseImpl
 import com.example.wanandroidkotlin.homes.viewmodel.HomeVM
 import io.reactivex.rxkotlin.subscribeBy
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,19 +14,14 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 class HomeActivity : BaseActivity() {
 
-    lateinit var articleAdapter : ArticleAdapter
+    private lateinit var articleAdapter : ArticleAdapter
 
-    private val homeVM = HomeVM(HomesModelImpl())
-
+    private val homeVM = HomeVM(HomesUseCaseImpl())
 
     override var layoutId = R.layout.activity_main
 
-
-
     override fun initData() {
-
         articleAdapter = ArticleAdapter()
-
         articleRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = articleAdapter
@@ -54,7 +49,6 @@ class HomeActivity : BaseActivity() {
 
 
     private fun loadArticles(){
-
         homeVM.articles.subscribeBy (
             onError = { error->error.printStackTrace()},
             onNext = { article ->
@@ -62,7 +56,6 @@ class HomeActivity : BaseActivity() {
                 articleAdapter.notifyDataSetChanged()
             }
         ).disposeOnClear()
-
     }
 
 

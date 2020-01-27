@@ -1,4 +1,4 @@
-package com.example.wanandroidkotlin.data
+package com.example.wanandroidkotlin.homes.model
 
 data class Article(
     var `data`: Data,

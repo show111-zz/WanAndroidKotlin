@@ -10,7 +10,6 @@ import android.os.Build
  */
 class NetUtils {
 
-
     companion object{
         /**
          * network connected or not

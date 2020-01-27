@@ -2,7 +2,7 @@ package com.example.wanandroidkotlin.homes.view
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.wanandroidkotlin.data.DataX
+import com.example.wanandroidkotlin.homes.model.DataX
 import kotlinx.android.synthetic.main.view_item_article.view.*
 
 /**

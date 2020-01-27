@@ -1,9 +1,6 @@
 package com.example.wanandroidkotlin.http
 
 import com.example.wanandroidkotlin.BuildConfig
-import com.example.wanandroidkotlin.http.interceptor.CacheInterceptor
-import com.example.wanandroidkotlin.http.interceptor.CookieInterceptor
-import com.example.wanandroidkotlin.http.interceptor.HeaderInterceptor
 import dagger.Module
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -35,9 +32,6 @@ class HttpManager private constructor(){
             val loggingInterceptor = HttpLoggingInterceptor()
             loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
             builder.addInterceptor(loggingInterceptor)
-            builder.addInterceptor(CookieInterceptor())
-            builder.addInterceptor(HeaderInterceptor())
-            builder.addInterceptor(CacheInterceptor())
         }
         val okHttpClient = builder.build()
         val retrofit = Retrofit.Builder()

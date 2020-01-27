@@ -4,12 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wanandroidkotlin.R
-import com.example.wanandroidkotlin.data.DataX
+import com.example.wanandroidkotlin.homes.model.DataX
 
 /**
  *  Created by hannah on 2020-01-24
  */
-
 class ArticleAdapter : RecyclerView.Adapter<ArticleHolder>() {
 
     private var articles = listOf<DataX>()

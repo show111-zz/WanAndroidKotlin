@@ -1,19 +1,18 @@
 package com.example.wanandroidkotlin.homes.viewmodel
 
 import com.example.wanandroidkotlin.base.BaseViewModel
-import com.example.wanandroidkotlin.data.Article
-import com.example.wanandroidkotlin.data.BannerBean
-import com.example.wanandroidkotlin.homes.model.HomesModel
+import com.example.wanandroidkotlin.homes.model.Article
+import com.example.wanandroidkotlin.homes.model.BannerBean
+import com.example.wanandroidkotlin.homes.usecase.HomesUseCaseImpl
 import io.reactivex.Observable
 
 /**
  *  Created by hannah on 2020-01-21
  */
-class HomeVM(homeModel: HomesModel): BaseViewModel() {
+class HomeVM(homeUseCase: HomesUseCaseImpl): BaseViewModel() {
 
-    val homes: Observable<BannerBean> = homeModel.getBanner()
+    val homes: Observable<BannerBean> = homeUseCase.getBanner()
 
-    val articles: Observable<Article> = homeModel.getArticle()
-
+    val articles: Observable<Article> = homeUseCase.getArticle()
 
 }
