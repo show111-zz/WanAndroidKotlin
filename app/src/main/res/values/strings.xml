@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">WanAndroidKotlin</string>
+    <string name="wechat">WeChat</string>
+    <string name="project">Project</string>
+    <string name="knowledge">Knowledge</string>
 </resources>

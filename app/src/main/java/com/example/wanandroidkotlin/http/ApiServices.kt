@@ -1,5 +1,6 @@
 package com.example.wanandroidkotlin.http
 
+import com.example.wanandroidkotlin.detail.model.Knowledge
 import com.example.wanandroidkotlin.homes.model.Article
 import com.example.wanandroidkotlin.homes.model.BannerBean
 import io.reactivex.Observable
@@ -22,6 +23,10 @@ interface ApiServices{
     // article list
     @GET("article/list/0/json")
     fun getArticleList(): Observable<Article>
+
+    // knowledge
+    @GET("tree/json")
+    fun getKnowledgesList(): Observable<Knowledge>
 
 
 }

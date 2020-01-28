@@ -1,7 +1,11 @@
 package com.example.wanandroidkotlin.homes.view
 
+import android.content.Intent
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.example.wanandroidkotlin.detail.view.DetailActivity
 import com.example.wanandroidkotlin.R
 import com.example.wanandroidkotlin.base.BaseActivity
 import com.example.wanandroidkotlin.homes.usecase.HomesUseCaseImpl
@@ -14,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 class HomeActivity : BaseActivity() {
 
-    private lateinit var articleAdapter : ArticleAdapter
+    lateinit var articleAdapter : ArticleAdapter
 
     private val homeVM = HomeVM(HomesUseCaseImpl())
 
@@ -22,17 +26,20 @@ class HomeActivity : BaseActivity() {
 
     override fun initData() {
         articleAdapter = ArticleAdapter()
+
         articleRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
+            this.addItemDecoration(DividerItemDecoration(this@HomeActivity, LinearLayout.VERTICAL))
             adapter = articleAdapter
+        }
+
+        articleAdapter.onItemClick = {
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
         }
 
         loadBannerImage()
         loadArticles()
-    }
-
-    override fun subscribeUi() {
-
     }
 
     /**   load banner image   */

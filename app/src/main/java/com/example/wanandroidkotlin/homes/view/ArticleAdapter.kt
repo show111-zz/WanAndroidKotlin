@@ -30,5 +30,4 @@ class ArticleAdapter : RecyclerView.Adapter<ArticleHolder>() {
         this.articles = articles
     }
 
-
 }

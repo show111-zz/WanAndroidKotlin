@@ -16,11 +16,14 @@ class ArticleHolder(articleView: View):  RecyclerView.ViewHolder(articleView){
         dataX: DataX,
         onItemClick: ((DataX) -> Unit)?
     ) {
+        view.author.text = dataX.author
         view.articleView.text = dataX.title
+        view.date.text = dataX.niceDate
+        view.category.text = dataX.superChapterName
+
         view.setOnClickListener {
             onItemClick?.invoke(dataX)
         }
-
     }
 
 }

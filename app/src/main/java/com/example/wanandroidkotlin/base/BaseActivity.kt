@@ -17,13 +17,10 @@ abstract class BaseActivity : AppCompatActivity() {
 
     protected abstract fun initData()
 
-    protected abstract fun subscribeUi()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
         initData()
-        subscribeUi()
     }
 
     protected fun Disposable.disposeOnClear() = addTo(compositeDisposable)
