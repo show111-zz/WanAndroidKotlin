@@ -1,11 +1,12 @@
 package com.example.wanandroidkotlin.http
 
-import com.example.wanandroidkotlin.detail.model.Knowledge
-import com.example.wanandroidkotlin.detail.model.Wechat
+import com.example.wanandroidkotlin.detail.model.*
 import com.example.wanandroidkotlin.homes.model.Article
 import com.example.wanandroidkotlin.homes.model.BannerBean
 import io.reactivex.Observable
 import retrofit2.http.GET
+import retrofit2.http.Path
+import retrofit2.http.Query
 
 /**
  *  Created by hannah on 2020-01-17
@@ -32,6 +33,14 @@ interface ApiServices{
     // wechat
     @GET("wxarticle/list/408/1/json")
     fun getWechatList(): Observable<Wechat>
+
+
+    @GET("project/tree/json")
+    fun getTabList(): Observable<TabBean>
+
+
+    @GET("project/list/1/json")
+    fun getTabProjectList(@Query("cid")cid: Int): Observable<ProjectList>
 
 
 }
