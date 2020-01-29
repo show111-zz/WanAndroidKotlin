@@ -5,10 +5,9 @@
     android:background="@color/background_app"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/name"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wechatRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/wechat"/>
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

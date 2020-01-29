@@ -1,4 +1,4 @@
-package com.example.wanandroidkotlin.detail.view
+package com.example.wanandroidkotlin.detail.view.knowledge
 
 import android.content.Context
 import android.view.View

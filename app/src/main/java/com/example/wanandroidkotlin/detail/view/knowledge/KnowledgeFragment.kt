@@ -1,4 +1,4 @@
-package com.example.wanandroidkotlin.detail.view
+package com.example.wanandroidkotlin.detail.view.knowledge
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wanandroidkotlin.R

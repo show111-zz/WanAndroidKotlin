@@ -1,4 +1,4 @@
-package com.example.wanandroidkotlin.detail.view
+package com.example.wanandroidkotlin.detail.view.knowledge
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -16,7 +16,10 @@ class KnowledgeAdapter : RecyclerView.Adapter<KnowledgeViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KnowledgeViewHolder {
         var knowledgeView =
             LayoutInflater.from(parent.context).inflate(R.layout.view_item_knowledge, parent, false)
-        return KnowledgeViewHolder(knowledgeView, parent.context)
+        return KnowledgeViewHolder(
+            knowledgeView,
+            parent.context
+        )
     }
 
     override fun getItemCount(): Int = knowledge.size

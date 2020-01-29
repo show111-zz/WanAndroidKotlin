@@ -1,4 +1,4 @@
-package com.example.wanandroidkotlin.detail.view
+package com.example.wanandroidkotlin.detail.view.project
 
 import com.example.wanandroidkotlin.R
 import com.example.wanandroidkotlin.base.BaseFragment

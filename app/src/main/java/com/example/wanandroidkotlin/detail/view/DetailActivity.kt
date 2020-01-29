@@ -3,6 +3,9 @@ package com.example.wanandroidkotlin.detail.view
 import androidx.fragment.app.Fragment
 import com.example.wanandroidkotlin.R
 import com.example.wanandroidkotlin.base.BaseActivity
+import com.example.wanandroidkotlin.detail.view.knowledge.KnowledgeFragment
+import com.example.wanandroidkotlin.detail.view.project.ProjectFragment
+import com.example.wanandroidkotlin.detail.view.wechat.WechatFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomnavigation.LabelVisibilityMode.LABEL_VISIBILITY_LABELED
 import kotlinx.android.synthetic.main.activity_detail.*
