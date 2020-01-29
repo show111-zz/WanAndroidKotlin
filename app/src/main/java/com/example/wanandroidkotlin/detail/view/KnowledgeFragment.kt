@@ -13,8 +13,6 @@ import kotlinx.android.synthetic.main.fragment_knowledge.*
  */
 class KnowledgeFragment : BaseFragment(){
 
-    val list = listOf("one", "two", "three","four", "five")
-
     private lateinit var knowledgeAdapter: KnowledgeAdapter
 
     private lateinit var knowledgeVM: KnowledgeVM
@@ -27,7 +25,6 @@ class KnowledgeFragment : BaseFragment(){
             layoutManager = LinearLayoutManager(context)
             adapter = knowledgeAdapter
         }
-
 
         knowledgeVM = KnowledgeVM(KnowledgeUseCaseImpl())
 

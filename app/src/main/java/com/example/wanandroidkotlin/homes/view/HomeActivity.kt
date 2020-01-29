@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 class HomeActivity : BaseActivity() {
 
-    lateinit var articleAdapter : ArticleAdapter
+    private lateinit var articleAdapter : ArticleAdapter
 
     private val homeVM = HomeVM(HomesUseCaseImpl())
 

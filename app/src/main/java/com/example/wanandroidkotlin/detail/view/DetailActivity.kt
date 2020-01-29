@@ -18,8 +18,6 @@ class DetailActivity : BaseActivity() {
 
     private var currentFragment: Fragment? = null
 
-    private val bottomTitles = arrayOf(R.string.project, R.string.knowledge, R.string.wechat)
-
     private val fragmentName = arrayOf(
         ProjectFragment::class.java.name,
         KnowledgeFragment::class.java.name,
