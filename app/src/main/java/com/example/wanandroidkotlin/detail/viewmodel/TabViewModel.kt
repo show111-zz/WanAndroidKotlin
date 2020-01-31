@@ -7,14 +7,8 @@ import com.example.wanandroidkotlin.detail.usecase.ProjectUseCase
 import io.reactivex.Observable
 
 /**
- *  Created by hannah on 2020-01-29
+ *  Created by hannah on 2020-01-31
  */
-class ProjectVM(private val projectUseCase: ProjectUseCase) : BaseViewModel() {
-
-    val tabs = projectUseCase
-        .getTabs()
-        .map {
-            it.map{ tab: Tab -> TabViewModel(tab, projectUseCase) }
-        }
+class TabViewModel(val tab: Tab, private val projectsUseCase: ProjectUseCase) : BaseViewModel(){
+    val projectData: Observable<List<ProjectData>> = projectsUseCase.getProjects(tab.id)
 }
-
