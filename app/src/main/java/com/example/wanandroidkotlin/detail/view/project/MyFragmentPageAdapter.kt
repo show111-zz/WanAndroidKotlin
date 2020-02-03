@@ -13,11 +13,11 @@ class MyFragmentPageAdapter(
     fragmentManager: FragmentManager
 ) : FragmentStatePagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-//    private var fragmentList = tabs.map {
-//        TabFragment(it)
-//    }.toMutableList()
+    private var fragmentList = tabs.map {
+        TabFragment(it)
+    }.toMutableList()
 
-    private var fragmentList = setData(tabs)
+//    private var fragmentList = setData(tabs)
 
     override fun getItem(position: Int): Fragment {
         return fragmentList[position]
@@ -29,12 +29,12 @@ class MyFragmentPageAdapter(
         return fragmentList[position].tabViewModel.tab.name
     }
 
-    fun setData(data: List<TabViewModel>) : MutableList<TabFragment>{
-        val fragmentList = mutableListOf<TabFragment>()
-        fragmentList.clear()
-        fragmentList.addAll(data.map { TabFragment(it) })
-        notifyDataSetChanged()
-        return fragmentList
-    }
+//    fun setData(data: List<TabViewModel>) : MutableList<TabFragment>{
+//        val fragmentList = mutableListOf<TabFragment>()
+//        fragmentList.clear()
+//        fragmentList.addAll(data.map { TabFragment(it) })
+//        notifyDataSetChanged()
+//        return fragmentList
+//    }
 
 }
