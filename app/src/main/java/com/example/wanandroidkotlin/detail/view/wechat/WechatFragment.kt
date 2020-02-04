@@ -13,23 +13,30 @@ import kotlinx.android.synthetic.main.fragment_wechat.*
  */
 class WechatFragment : BaseFragment(){
 
+    var page: Int = 1
+
     private lateinit var wechatAdapter: WechatAdapter
 
-    private var wechatVM: WechatVM = WechatVM(WechatUseCaseImpl())
+    private lateinit var wechatVM: WechatVM
 
     override var layoutId: Int = R.layout.fragment_wechat
 
     override fun initData() {
         wechatAdapter = WechatAdapter()
 
+        wechatVM = WechatVM(WechatUseCaseImpl(), page)
+
         wechatRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = wechatAdapter
         }
+        getMoreItems()
+    }
 
+    private fun getMoreItems() {
         wechatVM.wechats.subscribeBy {
-            wechatAdapter.setData(it)
-            wechatAdapter.notifyDataSetChanged()
+            page++
+            wechatAdapter.addData(ArrayList(it))
         }
     }
 

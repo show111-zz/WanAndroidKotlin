@@ -10,9 +10,9 @@ import io.reactivex.schedulers.Schedulers
  *  Created by hannah on 2020-01-29
  */
 class WechatUseCaseImpl : WechatUseCase(){
-    override fun getWechatList(): Observable<List<WechatX>> {
+    override fun getWechatList(page: Int): Observable<List<WechatX>> {
          return HttpManager.getHttpManager().retrofit()
-             .getWechatList()
+             .getWechatList(page)
              .subscribeOn(Schedulers.io())
              .observeOn(AndroidSchedulers.mainThread())
              .map { it.data.datas }

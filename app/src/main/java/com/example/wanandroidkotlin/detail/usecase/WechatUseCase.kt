@@ -7,5 +7,5 @@ import io.reactivex.Observable
  *  Created by hannah on 2020-01-29
  */
 abstract class WechatUseCase {
-    abstract fun getWechatList(): Observable<List<WechatX>>
+    abstract fun getWechatList(page: Int): Observable<List<WechatX>>
 }

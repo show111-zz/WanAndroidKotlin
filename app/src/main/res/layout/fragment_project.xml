@@ -9,12 +9,12 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabTextColor="@color/divider_color"
-        app:tabSelectedTextColor="@color/red_bg"
+        app:tabTextColor="@color/cardview_dark_background"
+        app:tabSelectedTextColor="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/colorPrimary"
+        android:background="@color/white"
         app:tabGravity="center"
-        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="@dimen/dp_2"
         app:tabMode="scrollable"/>
 

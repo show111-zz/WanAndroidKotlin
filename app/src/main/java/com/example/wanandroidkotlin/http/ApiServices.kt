@@ -31,8 +31,8 @@ interface ApiServices{
     fun getKnowledgesList(): Observable<Knowledge>
 
     // wechat
-    @GET("wxarticle/list/408/1/json")
-    fun getWechatList(): Observable<Wechat>
+    @GET("wxarticle/list/408/{page}/json")
+    fun getWechatList(@Path("page") id: Int): Observable<Wechat>
 
 
     @GET("project/tree/json")
@@ -40,7 +40,7 @@ interface ApiServices{
 
 
     @GET("project/list/1/json")
-    fun getTabProjectList(@Query("cid")cid: Int): Observable<ProjectList>
+    fun getTabProjectList(@Query("cid")cid: Int): Observable<Project>
 
 
 }

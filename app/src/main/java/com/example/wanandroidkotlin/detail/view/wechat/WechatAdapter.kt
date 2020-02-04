@@ -11,7 +11,7 @@ import com.example.wanandroidkotlin.detail.model.WechatX
  */
 class WechatAdapter : RecyclerView.Adapter<WechatViewHolder>(){
 
-    private var wechatList = listOf<WechatX>()
+    private var wechatList = arrayListOf<WechatX>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WechatViewHolder {
          var wechatView = LayoutInflater.from(parent.context).inflate(R.layout.view_item_wechat, parent, false)
@@ -25,8 +25,15 @@ class WechatAdapter : RecyclerView.Adapter<WechatViewHolder>(){
         holder.showData(wechatList[position])
     }
 
-    fun setData(wechatList: List<WechatX>){
+    fun setData(wechatList: ArrayList<WechatX>){
         this.wechatList = wechatList
+    }
+
+    fun addData(listItems: ArrayList<WechatX>) {
+        var size = this.wechatList.size
+        this.wechatList.addAll(listItems)
+        var sizeNew = this.wechatList.size
+        notifyItemRangeChanged(size, sizeNew)
     }
 
 }

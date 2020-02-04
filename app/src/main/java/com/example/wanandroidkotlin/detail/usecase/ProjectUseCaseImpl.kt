@@ -17,7 +17,7 @@ class ProjectUseCaseImpl : ProjectUseCase(){
             .getTabProjectList(cid)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .map { it.datas }
+            .map { it.data.datas }
     }
 
     override fun getTabs(): Observable<List<Tab>> {

@@ -22,10 +22,9 @@ class KnowledgeViewHolder(
 
         data.children.forEach {
             var label = LabelText(context)
-            label.setName(it.name)
+            label.setChild(it)
             view.flowLayout.addView(label)
         }
-
     }
 
 }
