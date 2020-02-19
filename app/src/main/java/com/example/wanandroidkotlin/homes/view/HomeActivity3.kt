@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 class HomeActivity3 : BaseActivity() {
 
-    private lateinit var articleAdapter: HomeAdapter3
+    private lateinit var articleAdapter: HomeAdapter
     lateinit var homeRepository: HomeRepository
     lateinit var homeDataSourceFactory: HomeDataSourceFactory
     private val compositeDisposable = CompositeDisposable()
@@ -37,7 +37,7 @@ class HomeActivity3 : BaseActivity() {
         homeRepository = HomeRepository()
         viewModel = getViewModel()
 
-        articleAdapter = HomeAdapter3()
+        articleAdapter = HomeAdapter()
         articleRecyclerView.layoutManager = LinearLayoutManager(this)
         articleRecyclerView.addItemDecoration(
             DividerItemDecoration(

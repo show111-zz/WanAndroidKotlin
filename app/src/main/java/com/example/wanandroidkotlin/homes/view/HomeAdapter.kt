@@ -10,7 +10,7 @@ import com.example.wanandroidkotlin.homes.model.ArticleItem
 /**
  *  Created by hannah on 2020-02-07
  */
-class HomeAdapter3: PagedListAdapter<ArticleItem, ArticleHolder>(DIFF_CALLBACK) {
+class HomeAdapter: PagedListAdapter<ArticleItem, ArticleHolder>(DIFF_CALLBACK) {
 
     var onItemClick: ((ArticleItem) -> Unit)? = null
 
