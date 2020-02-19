@@ -14,14 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".homes.view.HomeActivity3" android:theme="@style/AppTheme.NoTitle">
+        <activity android:name=".homes.view.HomeActivity" android:theme="@style/AppTheme.NoTitle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".detail.view.DetailActivity" android:theme="@style/AppTheme.NoTitle"/>
     </application>
 
 </manifest>

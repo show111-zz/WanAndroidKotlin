@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.Toast
 import com.example.wanandroidkotlin.R
-import com.example.wanandroidkotlin.detail.model.Children
+import com.example.wanandroidkotlin.homes.model.Children
 import kotlinx.android.synthetic.main.layout_text_view.view.*
 
 /**

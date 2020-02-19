@@ -1,10 +1,6 @@
 package com.example.wanandroidkotlin.http
 
-import com.example.wanandroidkotlin.detail.model.*
-import com.example.wanandroidkotlin.homes.model.Article
-import com.example.wanandroidkotlin.homes.model.BannerBean
-import com.example.wanandroidkotlin.homes.model.ArticleItem
-import com.example.wanandroidkotlin.homes.model.ArticleList
+import com.example.wanandroidkotlin.homes.model.*
 import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.http.GET

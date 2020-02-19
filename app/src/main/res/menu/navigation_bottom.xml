@@ -2,19 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-            android:id="@+id/project"
-            android:icon="@drawable/ic_project"
-            android:title="@string/project"/>
-
+        android:id="@+id/home"
+        android:icon="@drawable/ic_project"
+        android:title="@string/home" />
 
     <item
-            android:id="@+id/knowledge"
-            android:icon="@drawable/ic_dashboard_black_24dp"
-            android:title="@string/knowledge"/>
+        android:id="@+id/project"
+        android:icon="@drawable/ic_project"
+        android:title="@string/project" />
 
+    <item
+        android:id="@+id/knowledge"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/knowledge" />
 
     <item
         android:id="@+id/wechat"
         android:icon="@drawable/ic_wechat"
-        android:title="@string/wechat"/>
+        android:title="@string/wechat" />
 </menu>
