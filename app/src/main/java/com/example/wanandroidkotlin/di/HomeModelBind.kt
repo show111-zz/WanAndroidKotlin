@@ -1,7 +1,7 @@
 package com.example.wanandroidkotlin.di
 
 import androidx.lifecycle.ViewModel
-import com.example.wanandroidkotlin.homes.viewmodel.HomeVM
+import com.example.wanandroidkotlin.homes.viewmodel.HomeViewModel
 import dagger.Binds
 import dagger.Module
 
@@ -11,5 +11,5 @@ import dagger.Module
 @Module
 abstract class HomeModelBind {
     @Binds
-    abstract fun bindViewModel(vm: HomeVM): ViewModel
+    abstract fun bindViewModel(vm: HomeViewModel): ViewModel
 }

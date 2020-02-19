@@ -1,7 +1,7 @@
 package com.example.wanandroidkotlin.detail.usecase
 
 import com.example.wanandroidkotlin.detail.model.Data
-import com.example.wanandroidkotlin.http.HttpManager
+import com.example.wanandroidkotlin.http.RestApiFactory
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -11,7 +11,7 @@ import io.reactivex.schedulers.Schedulers
  */
 class KnowledgeUseCaseImpl : KnowledgeUseCase(){
     override fun getKnowledgeList(): Observable<List<Data>> {
-        return HttpManager.getHttpManager().retrofit()
+        return RestApiFactory.getHttpManager().retrofit()
             .getKnowledgesList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

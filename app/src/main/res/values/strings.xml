@@ -3,4 +3,5 @@
     <string name="wechat">WeChat</string>
     <string name="project">Project</string>
     <string name="knowledge">Knowledge</string>
+    <string name="retry">Retry Again</string>
 </resources>

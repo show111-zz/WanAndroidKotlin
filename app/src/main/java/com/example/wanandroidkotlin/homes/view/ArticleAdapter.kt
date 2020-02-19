@@ -4,15 +4,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wanandroidkotlin.R
-import com.example.wanandroidkotlin.homes.model.DataX
+import com.example.wanandroidkotlin.homes.model.ArticleItem
 
 /**
  *  Created by hannah on 2020-01-24
  */
 class ArticleAdapter : RecyclerView.Adapter<ArticleHolder>() {
 
-    private var articles = listOf<DataX>()
-    var onItemClick: ((DataX) -> Unit)? = null
+    private var articles = listOf<ArticleItem>()
+    var onItemClick: ((ArticleItem) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleHolder {
         var articleView =
@@ -26,7 +26,7 @@ class ArticleAdapter : RecyclerView.Adapter<ArticleHolder>() {
         holder.showArticle(articles[position], onItemClick)
     }
 
-    fun updateList(articles: List<DataX>) {
+    fun updateList(articles: List<ArticleItem>) {
         this.articles = articles
     }
 

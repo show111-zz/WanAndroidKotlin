@@ -1,15 +1,15 @@
 package com.example.wanandroidkotlin.homes.model
 
 data class Article(
-    var `data`: Data,
+    var `data`: ArticleList,
     var errorCode: Int,
     var errorMsg: String
 )
 
 
-data class Data(
+data class ArticleList(
     var curPage: Int,
-    var datas: List<DataX>,
+    var datas: List<ArticleItem>,
     var offset: Int,
     var over: Boolean,
     var pageCount: Int,
@@ -18,7 +18,7 @@ data class Data(
 )
 
 
-data class DataX(
+data class ArticleItem(
     var apkLink: String,
     var audit: Int,
     var author: String,

@@ -2,7 +2,7 @@ package com.example.wanandroidkotlin.homes.usecase
 
 import com.example.wanandroidkotlin.homes.model.Article
 import com.example.wanandroidkotlin.homes.model.BannerBean
-import com.example.wanandroidkotlin.http.HttpManager
+import com.example.wanandroidkotlin.http.RestApiFactory
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -12,9 +12,8 @@ import io.reactivex.schedulers.Schedulers
  */
 class HomesUseCaseImpl : HomesUseCase {
 
-
     override fun getArticle(): Observable<Article> {
-        return HttpManager.getHttpManager()
+        return RestApiFactory.getHttpManager()
             .retrofit()
             .getArticleList()
             .subscribeOn(Schedulers.io())
@@ -22,7 +21,7 @@ class HomesUseCaseImpl : HomesUseCase {
     }
 
     override fun getBanner(): Observable<BannerBean> {
-        return HttpManager.getHttpManager()
+        return RestApiFactory.getHttpManager()
             .retrofit()
             .getTop250()
             .subscribeOn(Schedulers.io())

@@ -7,14 +7,13 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
 import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
  *  Created by hannah on 2020-01-21
  */
-class AppApplication : Application(), HasActivityInjector {
+class AppApplication : Application() {
 
     companion object{
         lateinit var instance: Application
@@ -24,7 +23,7 @@ class AppApplication : Application(), HasActivityInjector {
     lateinit var activityInjector: DispatchingAndroidInjector<Activity>
 
 
-    override fun activityInjector(): AndroidInjector<Activity> = activityInjector
+//    override fun activityInjector(): AndroidInjector<Activity> = activityInjector
 
 
     override fun onCreate() {
@@ -32,10 +31,10 @@ class AppApplication : Application(), HasActivityInjector {
 
         instance = this
 
-        DaggerMyAppComponent.builder()
-            .application(this)
-            .build()
-            .inject(this)
+//        DaggerMyAppComponent.builder()
+//            .application(this)
+//            .build()
+//            .inject(this)
     }
 }
 

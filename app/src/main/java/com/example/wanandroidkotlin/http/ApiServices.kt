@@ -3,7 +3,10 @@ package com.example.wanandroidkotlin.http
 import com.example.wanandroidkotlin.detail.model.*
 import com.example.wanandroidkotlin.homes.model.Article
 import com.example.wanandroidkotlin.homes.model.BannerBean
+import com.example.wanandroidkotlin.homes.model.ArticleItem
+import com.example.wanandroidkotlin.homes.model.ArticleList
 import io.reactivex.Observable
+import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -25,6 +28,12 @@ interface ApiServices{
     // article list
     @GET("article/list/0/json")
     fun getArticleList(): Observable<Article>
+
+    @GET("article/list/{page}/json")
+    fun getArticleList2(@Path("page") id: Int): Single<Article>
+
+    @GET("article/list/{page}/json")
+    fun getArticleList3(@Path("page") page: Int): List<ArticleItem>
 
     // knowledge
     @GET("tree/json")

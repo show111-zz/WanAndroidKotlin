@@ -8,9 +8,9 @@ import io.reactivex.rxkotlin.addTo
 /**
  *  Created by hannah on 2020-01-21
  */
-abstract class BaseViewModel : ViewModel() {
+abstract class BaseViewModel : ViewModel(){
 
-    private val compositeDisposable = CompositeDisposable()
+    val compositeDisposable = CompositeDisposable()
 
     protected fun Disposable.disposeOnClear() = addTo(compositeDisposable)
 
