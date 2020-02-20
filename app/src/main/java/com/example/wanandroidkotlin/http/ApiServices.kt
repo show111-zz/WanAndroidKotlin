@@ -18,18 +18,12 @@ interface ApiServices{
 
     // banner
     @GET("banner/json")
-    fun getTop250(): Observable<BannerBean>
-
+    fun getTop250(): Single<BannerBean>
 
     // article list
-    @GET("article/list/0/json")
-    fun getArticleList(): Observable<Article>
-
     @GET("article/list/{page}/json")
-    fun getArticleList2(@Path("page") id: Int): Single<Article>
+    fun getArticleList(@Path("page") id: Int): Single<Article>
 
-    @GET("article/list/{page}/json")
-    fun getArticleList3(@Path("page") page: Int): List<ArticleItem>
 
     // knowledge
     @GET("tree/json")

@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.view_item_knowledge.view.*
  *  Created by hannah on 2020-01-28
  */
 class KnowledgeViewHolder(
-    private var knowledgeView: View,
+    private val knowledgeView: View,
     private var context: Context
 ) : RecyclerView.ViewHolder(knowledgeView){
 
@@ -21,7 +21,7 @@ class KnowledgeViewHolder(
         view.name.text = data.name
 
         data.children.forEach {
-            var label = LabelText(context)
+            val label = LabelText(context)
             label.setChild(it)
             view.flowLayout.addView(label)
         }

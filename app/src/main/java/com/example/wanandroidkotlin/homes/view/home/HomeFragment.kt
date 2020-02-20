@@ -1,7 +1,7 @@
 package com.example.wanandroidkotlin.homes.view.home
 
-import android.content.Intent
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -11,7 +11,6 @@ import com.example.wanandroidkotlin.R
 import com.example.wanandroidkotlin.base.BaseFragment
 import com.example.wanandroidkotlin.homes.paging.HomeDataSourceFactory
 import com.example.wanandroidkotlin.homes.paging.HomeRepository
-import com.example.wanandroidkotlin.homes.view.HomeActivity
 import com.example.wanandroidkotlin.homes.viewmodel.HomeViewModel
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.activity_main.*
@@ -46,7 +45,7 @@ class HomeFragment : BaseFragment(){
         }
 
         articleAdapter.onItemClick = {
-            startActivity(Intent(activity, HomeActivity::class.java))
+            Toast.makeText(activity, "clicked item id is ${it.id}", Toast.LENGTH_LONG).show()
         }
 
         viewModel.articleList.observe(

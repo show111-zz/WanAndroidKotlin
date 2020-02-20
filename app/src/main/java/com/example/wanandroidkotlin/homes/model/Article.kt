@@ -47,5 +47,6 @@ data class ArticleItem(
     var type: Int,
     var userId: Int,
     var visible: Int,
-    var zan: Int
+    var zan: Int,
+    var bannerData: List<Banner>
 )
