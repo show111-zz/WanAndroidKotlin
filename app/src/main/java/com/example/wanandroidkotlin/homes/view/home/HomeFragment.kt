@@ -1,5 +1,6 @@
 package com.example.wanandroidkotlin.homes.view.home
 
+import android.content.Intent
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -45,7 +46,7 @@ class HomeFragment : BaseFragment(){
         }
 
         articleAdapter.onItemClick = {
-            Toast.makeText(activity, "clicked item id is ${it.id}", Toast.LENGTH_LONG).show()
+            startActivity(Intent(activity, WebActivity::class.java).putExtra("link", it.link))
         }
 
         viewModel.articleList.observe(
