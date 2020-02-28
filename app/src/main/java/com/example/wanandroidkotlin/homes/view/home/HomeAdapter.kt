@@ -11,6 +11,7 @@ import com.example.wanandroidkotlin.homes.paging.AdapterDataObserverProxy
 
 /**
  *  Created by hannah on 2020-02-07
+ *  for the whole page
  */
 class HomeAdapter : PagedListAdapter<ArticleItem, RecyclerView.ViewHolder>(DIFF_CALLBACK) {
 
@@ -27,14 +28,14 @@ class HomeAdapter : PagedListAdapter<ArticleItem, RecyclerView.ViewHolder>(DIFF_
         val header = LayoutInflater.from(parent.context).inflate(R.layout.view_header_home, parent, false)
         val articleView = LayoutInflater.from(parent.context).inflate(R.layout.view_item_article, parent, false)
         return when (viewType) {
-            ITEM_TYPE_HEADER -> ArticleHeaderHolder(header)
+            ITEM_TYPE_HEADER -> HeaderBannerHolder(parent.context, header)
             else -> ArticleHolder(articleView)
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is ArticleHeaderHolder -> holder.bindHeader2(getArticleItem(0)!!)
+            is HeaderBannerHolder -> holder.bindHeader(getArticleItem(0)!!)
             is ArticleHolder -> holder.showArticle(getArticleItem(position)!!, onItemClick)
         }
     }
